@@ -1,7 +1,39 @@
 {
   "version": "1.0.0",
-  "name": "asp.net",
+  "name": "webpack_typescript_aspnetmvc5",
+  "author": "Nicholas Fazzolari",
+  "license": "ISC",
   "private": true,
+  "description": "Dependency registry for Webpack and TypeScript",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w",
+    "clean": "rimraf Client/dist/main.js",
+    "test": "mocha"
+  },
   "devDependencies": {
+    "@types/jquery": "^3.5.5",
+    "@types/lodash": "^4.14.168",
+    "mocha": "^8.3.2",
+    "typescript": "^4.2.3",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "commonjs": "0.0.1",
+    "lodash": "^4.17.21",
+    "node": "^15.12.0",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^2.0.1",
+    "ts-loader": "^8.1.0"
+  },
+  "-vs-binding": {
+    "BeforeBuild": [
+      "build"
+    ],
+    "Clean": [
+      "clean"
+    ]
   }
 }
